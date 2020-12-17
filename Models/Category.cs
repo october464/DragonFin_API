@@ -19,19 +19,35 @@ namespace DragonFin_API.Models
         /// </summary>
         public int HouseholdId { get; set; }
 
+        /// <summary>
+        /// Shows the Category Name
+        /// </summary>
         public string Name { get; set; }
 
-
+        /// <summary>
+        /// Shows the description for the category a person creates
+        /// </summary>
         public string Description { get; set; }
 
-
+        /// <summary>
+        /// Able to get from household model
+        /// </summary>
         public virtual Household Household { get; set; }
 
+        /// <summary>
+        /// Able to get from transactions model
+        /// </summary>
         public virtual ICollection<Transaction> Transactions { get; set; }
 
 
-
+        /// <summary>
+        /// Able to get from category items model
+        /// </summary>
         public virtual ICollection<CategoryItem> CategoryItems { get; set; }
+
+        /// <summary>
+        /// Constructor for transactions and category items
+        /// </summary>
         public Category()
         {
             Transactions = new HashSet<Transaction>();

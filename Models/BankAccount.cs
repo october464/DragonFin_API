@@ -7,6 +7,9 @@ using System.Threading.Tasks;
    
 namespace DragonFin_API.Models
 {
+    /// <summary>
+    /// The Bank Account of the house holds that the users create
+    /// </summary>
     public class BankAccount
     {
         /// <summary>

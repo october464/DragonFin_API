@@ -46,6 +46,17 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:DragonFin_API.Controllers.UsersController.GetUsers">
+            <summary>
+            Gets 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DragonFin_API.Models.BankAccount">
+            <summary>
+            The Bank Account of the house holds that the users create
+            </summary>
+        </member>
         <member name="P:DragonFin_API.Models.BankAccount.Id">
             <summary>
             Primary key
@@ -96,6 +107,102 @@
             Shows what Category belongs to a household
             </summary>
         </member>
+        <member name="P:DragonFin_API.Models.Category.Name">
+            <summary>
+            Shows the Category Name
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Category.Description">
+            <summary>
+            Shows the description for the category a person creates
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Category.Household">
+            <summary>
+            Able to get from household model
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Category.Transactions">
+            <summary>
+            Able to get from transactions model
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Category.CategoryItems">
+            <summary>
+            Able to get from category items model
+            </summary>
+        </member>
+        <member name="M:DragonFin_API.Models.Category.#ctor">
+            <summary>
+            Constructor for transactions and category items
+            </summary>
+        </member>
+        <member name="T:DragonFin_API.Models.CategoryItem">
+            <summary>
+            Responsable for Housing category items
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.CategoryItem.Id">
+            <summary>
+            Primary Key
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.CategoryItem.CategoryId">
+            <summary>
+            Shows what Category belongs to which house hold
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.CategoryItem.Name">
+            <summary>
+            This gives the name of the Category
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.CategoryItem.Description">
+            <summary>
+            Description of category Item
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.CategoryItem.TargetAmount">
+            <summary>
+            Amount that the user starts with for the item
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:DragonFin_API.Models.CategoryItem.ActualAmount" -->
+        <member name="T:DragonFin_API.Models.FPUser">
+            <summary>
+            User that is logged in
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.FPUser.FirstName">
+            <summary>
+            First Name of the user who is logged in
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.FPUser.LastName">
+            <summary>
+            Last Name of the user who is logged in
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.FPUser.FormFile">
+            <summary>
+            service for avatar
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.FPUser.FileName">
+            <summary>
+            Name for the image file
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.FPUser.FileData">
+            <summary>
+            Data of the file that is loaded into the application
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.FPUser.HouseholdId">
+            <summary>
+            The house hold Id that is associated with the users whow are logged in
+            </summary>
+        </member>
         <member name="T:DragonFin_API.Models.Household">
             <summary>
             This is the Type that models a household
@@ -121,6 +228,151 @@
             When household was created
             </summary>
         </member>
+        <member name="T:DragonFin_API.Models.Invitation">
+            <summary>
+            The Model responsable for creating an invitation to allow someone to join a house hold
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.Id">
+            <summary>
+            Primary key 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.HouseholdId">
+            <summary>
+            The house hold associated with the invitations sent
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.Created">
+            <summary>
+            Date the invitation was created
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.Expires">
+            <summary>
+            Date the the user is able to set before the user can no longer accept the invite to the house hold
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.Accepted">
+            <summary>
+            Shows if the person that was invited accepted the invite to the house hold
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.IsValid">
+            <summary>
+            Tells if the invite is valid
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.EmailTo">
+            <summary>
+            The email that the invite will be set to
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.Subject">
+            <summary>
+            Preview about the email sent
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.Body">
+            <summary>
+            Where the sender tells the recipient what the email is about
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.RoleName">
+            <summary>
+            Role that each user is asigned 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Invitation.Code">
+            <summary>
+            Guid that is sent with the invite for that particular person
+            </summary>
+        </member>
+        <member name="T:DragonFin_API.Models.Notification">
+            <summary>
+            Notifications that the user will receive about overdraft
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Notification.Id">
+            <summary>
+            Primary key
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Notification.HouseholdId">
+            <summary>
+            The house hold that the notification is a part of 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Notification.Created">
+            <summary>
+            Date the the notification was created 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Notification.Subject">
+            <summary>
+            Subject of the notifications
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Notification.Body">
+            <summary>
+            Body of the notification
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Notification.IsRead">
+            <summary>
+            Notification shows if it was read or not
+            </summary>
+        </member>
+        <member name="T:DragonFin_API.Models.Transaction">
+            <summary>
+            This model helps create a transaction show the user knows spending habits
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.Id">
+            <summary>
+            Primary key
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.CategoryItemId">
+            <summary>
+            Gets the category item that the transaction was made in
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.BankAccountId">
+            <summary>
+            Gets the bank account associated when the transaction was made
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.FPUserId">
+            <summary>
+            Particular user that made the transaction
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.Created">
+            <summary>
+            Date that the transactions were made 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.Type">
+            <summary>
+            Transaction type "Checking and Savings"  account that the users adds to the house
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.Memo">
+            <summary>
+            Notes on what the user buys
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.Amount">
+            <summary>
+            The transactions amount (Spending amount)
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Transaction.IsDeleted">
+            <summary>
+            Can mark the transaction as deleted
+            </summary>
+        </member>
         <member name="T:Finportal.Data.ApplicationDbContext">
             <summary>
             Where to get the data from
@@ -132,6 +384,21 @@
             </summary>
             <param name="configuration"></param>
             <returns></returns>
+        </member>
+        <member name="T:Finportal.Enum.AccountType">
+            <summary>
+            Accounts that the user can choose from
+            </summary>
+        </member>
+        <member name="F:Finportal.Enum.AccountType.Checkings">
+            <summary>
+            Checking that is a part of the users bank account
+            </summary>
+        </member>
+        <member name="F:Finportal.Enum.AccountType.Savings">
+            <summary>
+            Savings that is a part of the users bank account
+            </summary>
         </member>
     </members>
 </doc>

@@ -19,7 +19,10 @@ namespace DragonFin_API.Controllers
             _configuration = configuration;
         }
 
-
+        /// <summary>
+        /// Retrieves all the records from the Users section in Postgress DB
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAllUsers")]
         public IEnumerable<FPUser> GetUsers()
         {
