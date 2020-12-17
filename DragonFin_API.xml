@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DragonFin_API</name>
+    </assembly>
+    <members>
+        <member name="M:DragonFin_API.Controllers.BankAccountsController.GetBankAccounts">
+            <summary>
+            Retrieves all the records from the Bank Accounts from the Postgress DB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragonFin_API.Controllers.CategoriesController.GetCategories">
+            <summary>
+            Retrieves all the records from the Categories section in Postgress DB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragonFin_API.Controllers.CategoryItemsController.GetCategoryItems">
+            <summary>
+            Retrieves all the records from the Category Items section in Postgress DB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragonFin_API.Controllers.HouseholdsController.GetHouseholds">
+            <summary>
+            Retrieves all the records from the Household from the Postgress DB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragonFin_API.Controllers.InvitationsController.GetInvitations">
+            <summary>
+            Retrieves all the records from the Invitations section in Postgress DB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragonFin_API.Controllers.NotificationsController.GetNotifications">
+            <summary>
+            Retrieves all the records from the Notifications section in Postgress DB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragonFin_API.Controllers.TransactionsController.GetTransactions">
+            <summary>
+            Retrieves all the records from the Transactions section in Postgress DB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DragonFin_API.Models.BankAccount.Id">
+            <summary>
+            Primary key
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.BankAccount.HouseholdId">
+            <summary>
+            Shows what Bank Account belongs to the House Hold
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.BankAccount.FPUserId">
+            <summary>
+            This gives the Id of the associated user who is logged in
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.BankAccount.Name">
+            <summary>
+            This gives the name of the Bank Account 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.BankAccount.Type">
+            <summary>
+            This shows which type of Bank Account the user select "Checking or Savings" 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.BankAccount.StartingBalance">
+            <summary>
+            This gives the Starting Balance that the user enters when creating a Bank Account 
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.BankAccount.CurrentBalance">
+            <summary>
+            This gives the Current Balance  before and after transactions are made in the Bank Account
+            </summary>
+        </member>
+        <member name="T:DragonFin_API.Models.Category">
+            <summary>
+            Shows the Category that the user wants to set up a budget for
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Category.Id">
+            <summary>
+            Primary Key
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Category.HouseholdId">
+            <summary>
+            Shows what Category belongs to a household
+            </summary>
+        </member>
+        <member name="T:DragonFin_API.Models.Household">
+            <summary>
+            This is the Type that models a household
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Household.Id">
+            <summary>
+            Primary key
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Household.Name">
+            <summary>
+            Household Name
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Household.Greeting">
+            <summary>
+            Household Greeting
+            </summary>
+        </member>
+        <member name="P:DragonFin_API.Models.Household.Established">
+            <summary>
+            When household was created
+            </summary>
+        </member>
+        <member name="T:Finportal.Data.ApplicationDbContext">
+            <summary>
+            Where to get the data from
+            </summary>
+        </member>
+        <member name="M:Finportal.Data.ApplicationDbContext.GetAllHouseholds(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Gets the function from pgAdmin db
+            </summary>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
