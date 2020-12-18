@@ -1,4 +1,5 @@
-﻿using DragonFin_API.Models;
+﻿using DragonFin_API.Helper;
+using DragonFin_API.Models;
 using Finportal.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,17 +19,18 @@ namespace Finportal.Data
             : base(options)
         {
         }
-       
+
         /// <summary>
         /// Gets the function from pgAdmin db
         /// </summary>
         /// <param name="configuration"></param>
         /// <returns></returns>
+        /// DataHelper.GetConnectionString(Configuration)));
         #region Household
         public List<Household> GetAllHouseholds(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -59,7 +61,7 @@ namespace Finportal.Data
         public List<FPUser> GetAllUsers(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -90,7 +92,7 @@ namespace Finportal.Data
         public List<BankAccount> GetAllBankAccounts(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -121,7 +123,7 @@ namespace Finportal.Data
         public List<Category> GetAllCategories(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -152,7 +154,7 @@ namespace Finportal.Data
         public List<CategoryItem> GetAllCategoryItems(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -183,7 +185,7 @@ namespace Finportal.Data
         public List<Invitation> GetAllInvitations(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -214,7 +216,7 @@ namespace Finportal.Data
         public List<Notification> GetAllNotifications(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -245,7 +247,7 @@ namespace Finportal.Data
         public List<Transaction> GetAllTransactions(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB
@@ -276,7 +278,7 @@ namespace Finportal.Data
         public List<Attachment> GetAllAttachments(IConfiguration configuration)
         {
             //1. OPen connection string
-            var connString = new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connString = new NpgsqlConnection(DataHelper.GetConnectionString(configuration));
             connString.Open();
 
             //2. Need an empty List<FPUser> in case there aren't any in the DB

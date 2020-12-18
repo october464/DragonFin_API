@@ -35,7 +35,7 @@ namespace DragonFin_API
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version ="v1",
-                    Title = "DragonFin_API",
+                    Title = "Save 'N Money_API",
                     Description = "This service is open and available for general user. There is no authentication....",
                     Contact = new OpenApiContact
                     {
@@ -64,7 +64,7 @@ namespace DragonFin_API
             app.UseStaticFiles();
             app.UseSwagger();
             app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "<Project Name>");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "DragonFin_API");
                 c.RoutePrefix = string.Empty;
                 c.InjectStylesheet("/sagger-ui/custom.css");
                 c.InjectJavascript("/swagger-ui/custom.js");
